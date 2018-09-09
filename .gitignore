@@ -1,0 +1,6 @@
+.*.swp
+.*.swo
+.vscode
+secrets.json
+node_modules
+build
