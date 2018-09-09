@@ -1,4 +1,4 @@
-# XRemote Server
+# AndroX Server
 Works only for Xorg Servers.
 ## Setup
 ```bash
