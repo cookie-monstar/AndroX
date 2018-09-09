@@ -1,0 +1,6 @@
+{
+  "repository": "github:cookie-monstar/XRemote",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
