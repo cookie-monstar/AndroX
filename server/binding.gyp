@@ -1,9 +1,10 @@
 {
   "targets": [
     {
-      "target_name": "xorg",
-      "sources": [ "xorg.cc" ],
-      "libraries": ["-L/usr/X11/lib", "-lX11", "-lXtst"]
+      "target_name": "device",
+      "sources": [ "src/main.cc", "src/device.cc" ],
+      "cflags": [ "-std=c++11" ],
+      "libraries": []
     }
   ]
 }

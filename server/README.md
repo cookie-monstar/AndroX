@@ -1,6 +1,18 @@
 # AndroX Server
 Works only for Xorg Servers.
 ## Setup
+### Setting up /dev/uinput
+Skip this if you are okay to run the whole script as sudo (I'm sure you won't)
+Make a group call uinput, and add user to the group.
+```bash
+sudo addgroup uinput
+sudo adduser $USER uinput
+```
+Now add these lines to `/etc/udev/rules.d/99-input.rules`
+```
+KERNEL="uinput",GROUP="uinput",MODE:="0660"
+```
+### Setting up node and building addons
 ```bash
 # Global Dependencies #
 sudo apt-get install nodejs npm
