@@ -1,9 +1,8 @@
 # AndroX Server
-Works only for Xorg Servers.
 ## Setup
 ### Setting up /dev/uinput
-Skip this if you are okay to run the whole script as sudo (I'm sure you won't)
-Make a group call uinput, and add user to the group.
+Skip this if you are okay to run the whole script as sudo (I'm sure you aren't)
+Make a group called uinput, and add user to the group.
 ```bash
 sudo addgroup uinput
 sudo adduser $USER uinput
@@ -11,6 +10,10 @@ sudo adduser $USER uinput
 Now add these lines to `/etc/udev/rules.d/99-input.rules`
 ```
 KERNEL="uinput",GROUP="uinput",MODE:="0660"
+```
+The config should appear after restart, but if you are not ready to, just change the permissions once for now:
+```bash
+sudo chgrp uinput /dev/uinput
 ```
 ### Setting up node and building addons
 ```bash
